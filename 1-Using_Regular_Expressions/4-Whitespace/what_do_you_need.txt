@@ -1,0 +1,4 @@
+Download the hostsfile
+curl https://raw.githubusercontent.com/linuxacademy/content-mastering-regex/master/hostsfile -o hostsfile
+
+

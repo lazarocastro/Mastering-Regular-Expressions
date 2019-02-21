@@ -1,0 +1,5 @@
+Download and copy de processors.csv
+curl https://raw.githubusercontent.com/linuxacademy/content-mastering-regex/master/processors.csv -o processors.csv
+
+And Access
+https://regexr.com/

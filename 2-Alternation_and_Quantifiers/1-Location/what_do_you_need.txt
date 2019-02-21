@@ -1,0 +1,3 @@
+Download these files:
+curl https://raw.githubusercontent.com/linuxacademy/content-mastering-regex/master/customer-data.txt -o customer-data.txt
+curl https://raw.githubusercontent.com/linuxacademy/content-mastering-regex/master/access-logs -o access-logs
