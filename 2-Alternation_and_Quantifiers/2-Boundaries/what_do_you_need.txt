@@ -1,0 +1,6 @@
+Boundaries allow us to define the set end or beginning of a match, ensuring that our match is not part of a larger word or text;
+so when we search for cat, we don't get results like catastrophe or concatenate. This lesson covers both ERE, PCRE, and most modern-day
+regex boundaries, as well as an older method of marking boundaries that work in programs such as vim.
+
+You need to download that file:
+curl https://raw.githubusercontent.com/linuxacademy/content-mastering-regex/master/customer-data.txt -o customer-data.txt
