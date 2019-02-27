@@ -1,0 +1,4 @@
+Regular expressions are limited to one-to-one matches. Alternation allows us to provide regex options for what we want a token to match. In this lesson, we learn how to use the vertical bar (|) metacharacter to tell our regex engine when we want it to consider multiple matches.
+
+You need to download that file:
+curl https://raw.githubusercontent.com/linuxacademy/content-mastering-regex/master/access-logs -o access-logs
