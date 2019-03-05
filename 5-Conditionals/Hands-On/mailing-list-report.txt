@@ -1,0 +1,50 @@
+From: Ken <k23423@ethercloud.io>
+Subject: Project-specific sitemap for build server content
+From: Gavin <g23432423@ethercloud.io>
+Subject: Re: Project-specific sitemap for build server content
+From: Music <m23423423@ethercloud.io>
+Subject: Re: Project-specific sitemap for build server content
+From: Lance <l23423423@ethercloud.io>
+Subject: [Hosting] ns2.osuosl.org maintenance - June 11,
+From: Gavin <g23432423@ethercloud.io>
+Subject: Re: Project-specific sitemap for build server content
+From: Ken <k23423@ethercloud.io>
+Subject: Project-specific sitemap for build server content
+From: Lance <l23423423@ethercloud.io>
+Subject: [Hosting] Unplanned outage: Hypervisor issue with gprod1 on primary
+From: Lance <l23423423@ethercloud.io>
+Subject: [Hosting] ftp-osl storage upgrade (full rebuild required) - Jun 18,
+From: Lance <l23423423@ethercloud.io>
+Subject: Re: [Hosting] ftp-osl storage upgrade (full rebuild required) - Jun
+From: Daniel <d23423432@ethercloud.io>
+Subject: H0,8,30 are down
+From: Lance <l23423423@ethercloud.io>
+Subject: Re: [Hosting] ftp-osl storage upgrade (full rebuild required) - Jun
+From: Lance <l23423423@ethercloud.io>
+Subject: Re: [Hosting] ftp-osl storage upgrade (full rebuild required) - Jun
+Subject: [DISCUSS] Deploy releases to DockerHub
+From: Francesco <f2345345435@ethercloud.io>
+From: Lance <l23423423@ethercloud.io>
+Subject: Re: [Hosting] ftp-osl storage upgrade (full rebuild required) - Jun
+From: Lance <l23423423@ethercloud.io>
+Subject: Re: [Hosting] ftp-osl storage upgrade (full rebuild required) - Jun
+From: Joan <j234534534@ethercloud.io>
+Subject: Re: [DISCUSS] Deploy releases to DockerHub
+Subject: [DISCUSS] Deploy releases to DockerHub
+From: Gav <g23423423@ethercloud.io>
+Subject: Re: [DISCUSS] Deploy releases to DockerHub
+Subject: [DISCUSS] Deploy releases to DockerHub
+From: Lance <l23423423@ethercloud.io>
+Subject: [osuosl-openpower] Unplanned outage (openpower1)
+From: Gav <g498329483209@ethercloud.io>
+Subject: Jenkins Upgrade
+From: Zoran <z4534534@ethercloud.io>
+Subject: JDK 11 tool on Jenkins
+From: Gav <g498329483209@ethercloud.io>
+Subject: Re: JDK 11 tool on Jenkins
+From: Zoran <z4534534@ethercloud.io>
+Subject: Re: JDK 11 tool on Jenkins
+From: Gav <g498329483209@ethercloud.io>
+Subject: Re: JDK 11 tool on Jenkins
+From: Lance <l23423423@ethercloud.io>
+Subject: [Hosting] Partial datacenter outage this morning
