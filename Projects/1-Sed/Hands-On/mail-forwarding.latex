@@ -1,0 +1,127 @@
+\documentclass{article}
+\userpackage{hyperref}
+\begindocument
+\title{Configure a System to Forward All Email to a Central Mail Server}
+
+All Red Hat servers using postfix must forward their mail to alerts@ethercloud.io.
+
+\section{Forwarding Server}
+
+We need to install and configure Postfix to forward all email to an external server. Connect to the server, which works as our forwarding server and uses a null client; this entails that this server does not receive mail, but instead only receives requests to send to on to an actual email server.
+
+To begin, install Postfix:
+
+\begin{verbatim}
+[root@red-hat ~]# yum install postfix
+
+\end{verbatim}
+Postfix runs a mail daemon that allows the server to deal with mail on the server-level.
+
+Navigate to /etc/postfix, where the texttt{main.cf} and texttt{master.cf} files are hosted. These are the configuration files used to set up the Postfix install.
+
+Open texttt{main.cf} in your chosen text editor.
+
+This file contains a large number of settings; we need to hone in on the specific settings used to set up mail forwarding. The first of these settings is the \texttt{relayhost}, which tells the server where it should be relaying the mail when a request comes:
+
+\begin{verbatim}
+relayhost = [smtp.gmail.com]:587
+\end{verbatim}
+
+Additionally, we need to add in Gmail-specific encryption settings; generally additional settings do not need to be added for configurations outside of Gmail.
+
+\begin{verbatim}
+# Gmail Specific Settings
+\end{verbatim}
+\begin{verbatim}
+smtp_use_tls = yes
+\end{verbatim}
+\begin{verbatim}
+smtp_sasl_auth_enable = yes
+\end{verbatim}
+\begin{verbatim}
+smtp_sasl_password_maps = hash:/etc/postfix/sasl_password
+\end{verbatim}
+\begin{verbatim}
+smtp_tls_CAfile = /etc/ssl/certs/ca-bundle.crt
+\end{verbatim}
+\begin{verbatim}
+smtp_sasl_security_options = noanonymous
+\end{verbatim}
+\begin{verbatim}
+smtp_sasl_tls_security_options = noanonymous
+\end{verbatim}
+
+With the Gmail configuration added, we now need to look at the \texttt{inet_interfaces} options to indicate that we are only forwarding from our local system.
+
+\begin{verbatim}
+inet_interfaces = loopback-only
+\end{verbatim}
+
+Next, configure the \texttt{mynetworks} setting:
+
+\begin{verbatim}
+mynetworks = 127.0.0.0/8 [::1]/128
+\end{verbatim}
+
+The \texttt{myorigin} option sets the location of where messages are coming from. We want to set this to do a hostname lookup by defining the hostname of our server:
+
+\begin{verbatim}
+myorigin = $myhostname
+\end{verbatim}
+
+We also want to look at the destination; since we are only forwarding email to another server, this setting should instead be blank:
+
+\begin{verbatim}
+mydestination =
+\end{verbatim}
+
+The \texttt{local_transport` setting does not exist in the default configure, but should be added to indicate that local delivery is disabled. We added this setting immediately below the previous `mydestination} setting.
+
+\begin{verbatim}
+local_transport = error: local delivery disabled
+\end{verbatim}
+
+This completes the texttt{main.cf} configuration for email forwarding. Save and exit. From here, we need to create a sasl_poassword file to allow us to securely forward mail to Gmail; this is not needed for the RHCE exam, but does progress the lab.
+
+\begin{verbatim}
+[smtp.gmail.com]:587 alerts@ethercloud.io:password
+\end{verbatim}
+
+We can now test the server. Run \texttt{postmap} on the sasl_passwd file, so Postfix knows to use the provided configuration.
+
+\begin{verbatim}
+[root@red-hat postfix]# postmap sasl_passwd
+
+\end{verbatim}
+Ensure the permissions are correct on the sasl_passwd file:
+
+\begin{verbatim}
+[root@red-hat postfix]# chown root:postfix sasl_passwd
+[root@red-hat postfix]# chmod 640 sasl_passwd
+\end{verbatim}
+
+Rerun the \texttt{postmap} command:
+
+\begin{verbatim}
+[root@red-hat postfix]# postmap sasl_passwd
+
+\end{verbatim}
+Start the \texttt{postfix} service, and ensure it is set to start on boot:
+
+\begin{verbatim}
+[root@red-hat postfix]# systemctl enable postfix
+[root@red-hat postfix]# systemctl start postfix
+\end{verbatim}
+
+\section{Client Testing}
+
+With our relay server set up, we want to be able to test our mail on a client. 
+
+\begin{verbatim}
+[root@red-hat postfix]# mail -s "This is a POSTFIX RHCE forwarding test" alerts@ethercloud.io 
+
+\end{verbatim}
+Check the email sent to the address you provided. Should you try to reply to the email, the server is unable to receive it, since it is set up for mail forwarding, and no domains are configured.
+
+With the test finished, the forwarding server configuration is now complete!
+\end{document}
