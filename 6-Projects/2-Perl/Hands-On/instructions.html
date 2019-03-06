@@ -1,0 +1,53 @@
+<mat-card _ngcontent-c17="" class="mat-card"><h3 _ngcontent-c17="" class="ng-tns-c17-2">Instructions</h3><app-render-markdown _ngcontent-c17="" _nghost-c9="" class="ng-tns-c17-2"><md-editor _ngcontent-c9="" name="Content" _nghost-c11="" class="ng-untouched ng-valid ng-dirty"><div _ngcontent-c11="" class="md-editor-container"><!----><div _ngcontent-c11="" class="editor-container"><div _ngcontent-c11="" style="display: none;"><div _ngcontent-c11="" class="editor-panel" style="height: auto;"><div _ngcontent-c11="" class="ace-editor ace_editor ace-tm"><textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0;"></textarea><div class="ace_gutter"><div class="ace_layer ace_gutter-layer ace_folding-enabled"></div><div class="ace_gutter-active-line"></div></div><div class="ace_scroller"><div class="ace_content"><div class="ace_layer ace_print-margin-layer"><div class="ace_print-margin" style="left: 4px; visibility: visible;"></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_text-layer" style="padding: 0px 4px;"></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer ace_hidden-cursors"><div class="ace_cursor"></div></div></div></div><div class="ace_scrollbar ace_scrollbar-v" style="display: none; width: 20px;"><div class="ace_scrollbar-inner" style="width: 20px;"></div></div><div class="ace_scrollbar ace_scrollbar-h" style="display: none; height: 20px;"><div class="ace_scrollbar-inner" style="height: 20px;"></div></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: hidden;"><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;"></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div></div></div></div><div _ngcontent-c11="" style="display: block;"><div _ngcontent-c11="" class="preview-panel" style="height: auto;"><p>EtherCloud's internal documentation system is no longer working! As the web hosting company grows, keeping documentation in a self-maintained website is no longer working. Instead, it's been requested that documents are written in Latex so they can be added to a proper documentation repository. The only problem is what to do with the existing documents. By using the provided regex cheat sheet document, craft a Perl script to convert all existing HTML documents to Latex.</p>
+<p>If you're unfamiliar with Latex, use the following table to determine how to precede:</p>
+<table class="table table-bordered">
+<thead>
+<tr>
+<th>HTML Tag</th>
+<th>Latex</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H1</td>
+<td><code>\title{TITLE}</code></td>
+</tr>
+<tr>
+<td>H2</td>
+<td><code>\section{SECTIONNAME}</code></td>
+</tr>
+<tr>
+<td>H3</td>
+<td><code>\subsection{SECTIONNAME}</code></td>
+</tr>
+<tr>
+<td>Unordered Lists</td>
+<td><code>\begin{itemize}</code> AND <code>\end{itemize}</code></td>
+</tr>
+<tr>
+<td>List items</td>
+<td><code>\item</code></td>
+</tr>
+<tr>
+<td>Italics</td>
+<td><code>\textit{TEXT}</code></td>
+</tr>
+<tr>
+<td>Inline code</td>
+<td><code>texttt{TEXT}</code></td>
+</tr>
+<tr>
+<td>Code blocks</td>
+<td><code>\begin{verbatim}</code> AND <code>\end{verbatim}</code></td>
+</tr>
+</tbody>
+</table>
+<p>Additionally, all documents must start with:</p>
+<pre style="padding: 0; border-radius: 0;"><code class="hljs undefined">\documentclass{article}
+\usepackage{hyperref}
+\begin{document}</code></pre><p>And end with:</p>
+<pre style="padding: 0; border-radius: 0;"><code class="hljs undefined">\end{document}</code></pre><p>Note that if you're having trouble getting any backslashes to show up in your output, use two backslashes in its place (i.e., <code>s/&lt;ul&gt;/\\begin{itemize}/</code>).</p>
+<p>Save the script as <code>html-to-latex.pl</code>. Run it against the <code>regexcs.html</code> file and save the resulting output as <code>regexcs.latex</code>.</p>
+</div></div></div><!----></div></md-editor></app-render-markdown><h3 _ngcontent-c17="" class="ng-tns-c17-2">Objectives</h3><!----><div _ngcontent-c17="" class="ng-tns-c17-2 ng-star-inserted" style=""><div _ngcontent-c17="" class="task-container containerX" style="flex-direction: row; box-sizing: border-box; display: flex;"><div _ngcontent-c17="" class="task-listing-detail" fxflex="1 1 5%" fxflex.sm="1 1 15%" fxflex.xs="1 1 15%" style="flex: 1 1 100%; box-sizing: border-box; max-width: 15%;"><mat-icon _ngcontent-c17="" class="task-help mat-icon material-icons" role="img" aria-hidden="true">help</mat-icon></div><div _ngcontent-c17="" class="task-listing-detail" fxflex="1 1 95%" style="flex: 1 1 100%; box-sizing: border-box; max-width: 95%;"><strong _ngcontent-c17="" class="ng-tns-c17-2">Craft a script to convert HTML to Latex.</strong><br _ngcontent-c17="" class="ng-tns-c17-2"><div _ngcontent-c17="" class="explanation ng-trigger ng-trigger-showHide" style="max-height: 10000px;"><app-render-markdown _ngcontent-c17="" class="ng-tns-c17-2" _nghost-c9=""><md-editor _ngcontent-c9="" name="Content" _nghost-c11="" class="ng-untouched ng-valid ng-dirty"><div _ngcontent-c11="" class="md-editor-container"><!----><div _ngcontent-c11="" class="editor-container"><div _ngcontent-c11="" style="display: none;"><div _ngcontent-c11="" class="editor-panel" style="height: auto;"><div _ngcontent-c11="" class="ace-editor ace_editor ace-tm"><textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0;"></textarea><div class="ace_gutter"><div class="ace_layer ace_gutter-layer ace_folding-enabled"></div><div class="ace_gutter-active-line"></div></div><div class="ace_scroller"><div class="ace_content"><div class="ace_layer ace_print-margin-layer"><div class="ace_print-margin" style="left: 4px; visibility: visible;"></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_text-layer" style="padding: 0px 4px;"></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer ace_hidden-cursors"><div class="ace_cursor"></div></div></div></div><div class="ace_scrollbar ace_scrollbar-v" style="display: none; width: 20px;"><div class="ace_scrollbar-inner" style="width: 20px;"></div></div><div class="ace_scrollbar ace_scrollbar-h" style="display: none; height: 20px;"><div class="ace_scrollbar-inner" style="height: 20px;"></div></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: hidden;"><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;"></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div></div></div></div><div _ngcontent-c11="" style="display: block;"><div _ngcontent-c11="" class="preview-panel" style="height: auto;"><p> Using Perl, create a script that will convert any HTML documentation to Latex using the standards provided in the instructions.</p>
+</div></div></div><!----></div></md-editor></app-render-markdown></div></div></div></div><div _ngcontent-c17="" class="ng-tns-c17-2 ng-star-inserted" style=""><div _ngcontent-c17="" class="task-container containerX" style="flex-direction: row; box-sizing: border-box; display: flex;"><div _ngcontent-c17="" class="task-listing-detail" fxflex="1 1 5%" fxflex.sm="1 1 15%" fxflex.xs="1 1 15%" style="flex: 1 1 100%; box-sizing: border-box; max-width: 15%;"><mat-icon _ngcontent-c17="" class="task-help mat-icon material-icons" role="img" aria-hidden="true">help</mat-icon></div><div _ngcontent-c17="" class="task-listing-detail" fxflex="1 1 95%" style="flex: 1 1 100%; box-sizing: border-box; max-width: 95%;"><strong _ngcontent-c17="" class="ng-tns-c17-2">Convert `regexcs.html` to Latex.</strong><br _ngcontent-c17="" class="ng-tns-c17-2"><div _ngcontent-c17="" class="explanation ng-trigger ng-trigger-showHide" style="max-height: 10000px;"><app-render-markdown _ngcontent-c17="" class="ng-tns-c17-2" _nghost-c9=""><md-editor _ngcontent-c9="" name="Content" _nghost-c11="" class="ng-untouched ng-valid ng-dirty"><div _ngcontent-c11="" class="md-editor-container"><!----><div _ngcontent-c11="" class="editor-container"><div _ngcontent-c11="" style="display: none;"><div _ngcontent-c11="" class="editor-panel" style="height: auto;"><div _ngcontent-c11="" class="ace-editor ace_editor ace-tm"><textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0;"></textarea><div class="ace_gutter"><div class="ace_layer ace_gutter-layer ace_folding-enabled"></div><div class="ace_gutter-active-line"></div></div><div class="ace_scroller"><div class="ace_content"><div class="ace_layer ace_print-margin-layer"><div class="ace_print-margin" style="left: 4px; visibility: visible;"></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_text-layer" style="padding: 0px 4px;"></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer ace_hidden-cursors"><div class="ace_cursor"></div></div></div></div><div class="ace_scrollbar ace_scrollbar-v" style="display: none; width: 20px;"><div class="ace_scrollbar-inner" style="width: 20px;"></div></div><div class="ace_scrollbar ace_scrollbar-h" style="display: none; height: 20px;"><div class="ace_scrollbar-inner" style="height: 20px;"></div></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: hidden;"><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;"></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div></div></div></div><div _ngcontent-c11="" style="display: block;"><div _ngcontent-c11="" class="preview-panel" style="height: auto;"><p> Convert the provided HTML file to Latex; save as <code>regexcs.latex</code>.</p>
+</div></div></div><!----></div></md-editor></app-render-markdown></div></div></div></div></mat-card>
